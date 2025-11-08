@@ -1,4 +1,4 @@
-   - Navigate to `http://localhost/code2
+   - Navigate to `http://localhost/code
    - The database will be automatically created 
    - Default admin credentials: `admin@gmail.com` / `admin`
 
