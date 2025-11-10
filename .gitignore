@@ -31,6 +31,10 @@ php_errors.log
 /cache/
 /tmp/
 /temp/
+/storage/logs/*
+!/storage/logs/.gitkeep
+/storage/cache/*
+!/storage/cache/.gitkeep
 node_modules/
 vendor/
 
@@ -39,11 +43,6 @@ config/database_local.php
 config/secrets.php
 .env
 .env.local
-
-# Upload Directories
-/uploads/
-/files/
-/documents/
 
 # Database Dumps
 *.sql

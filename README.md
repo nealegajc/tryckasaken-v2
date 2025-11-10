@@ -1,41 +1,43 @@
-   - Navigate to `http://localhost/code
-   - The database will be automatically created 
-   - Default admin credentials: `admin@gmail.com` / `admin`
+### Setup Instructions
 
-## 📁 Project Structure
+**Database Setup**
+   - The system automatically creates the database and tables on first run
+   - Default database name: `tric_db`
+   - Tables are created using `DatabaseSchema.php`
+
+**Access the Application**
+   - Open browser and navigate to: `http://localhost/code2/`
+
+
+## Default Admin Account
+
+After installation, create an admin account through the registration form and manually update the user_type in the database to 'admin'.
+
+
+## Project Structure
 
 ```
-tryckasaken-v2/
-├── 📄 index.php                 # Landing page
-├── 📄 package.json             # Project metadata
-├── 📄 README.md                # This documentation
-├── 📄 ADMIN_FEATURES_TRACKER.md # Admin feature tracking
-├── 📁 config/
-│   └── 📄 dbConnection.php     # Database configuration
-├── 📁 database/
-│   ├── 📄 SCHEMA_INFO.md       # Database documentation
-│   └── 📄 schema.php           # Schema definition & seed data
-├── 📁 pages/
-│   ├── 📁 admin/               # Admin dashboard pages
-│   │   ├── 📄 admin_layout.php # Shared admin template
-│   │   ├── 📄 admin.php        # Main dashboard
-│   │   ├── 📄 users.php        # User management
-│   │   ├── 📄 driver_management.php # Driver oversight
-│   │   ├── 📄 bookings.php     # Booking management
-│   │   ├── 📄 analytics.php    # Analytics dashboard
-│   │   └── 📄 ...              # Other admin pages
-│   ├── 📁 auth/                # Authentication
-│   │   ├── 📄 login.php        # Multi-role login
-│   │   ├── 📄 register.php     # User registration
-│   │   └── 📄 logout.php       # Session termination
-│   ├── 📁 driver/              # Driver interface
-│   │   ├── 📄 loginDriver.php  # Driver dashboard
-│   │   └── 📄 request.php      # Ride requests
-│   └── 📁 passenger/           # Passenger interface
-│       ├── 📄 book.php         # Booking interface
-│       ├── 📄 loginUser.php    # Passenger dashboard
-│       └── 📄 trip_history.php # Booking history
-└── 📁 public/
-    └── 📁 css/
-        └── 📄 style.css        # Global styles & theme
+├── index.php                 # Landing page
+├── config/
+│   └── Database.php          # Database connection configuration
+├── database/
+│   └── DatabaseSchema.php    # Database schema definitions
+├── includes/
+│   └── database-setup.php    # Database initialization
+├── pages/
+│   ├── admin/               # Admin panel pages
+│   ├── auth/                # Authentication pages
+│   ├── driver/              # Driver dashboard pages
+│   └── passenger/           # Passenger dashboard pages
+├── public/
+│   ├── css/                 # Stylesheets
+│   └── uploads/             # File upload directory
+├── services/
+│   ├── BookingService.php   # Booking business logic
+│   └── RequestService.php   # Request handling logic
+└── templates/
+    ├── layouts/             # Page layouts
+    └── pages/               # Page templates
 ```
+
+
